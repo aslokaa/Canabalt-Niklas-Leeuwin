@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Centipede.GameStates;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -17,9 +18,10 @@ namespace Centipede
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            screen = new Point(470, 550);
+            screen = new Point(1280, 720);
             ApplyResolutionSettings();
-
+            gameStateManager.AddGameState("StartingState",new StartingState());
+            gameStateManager.SwitchTo("StartingState");
             // TODO: use this.Content to load your game content here
         }
         
