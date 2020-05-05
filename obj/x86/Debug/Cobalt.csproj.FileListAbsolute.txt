@@ -46,3 +46,6 @@ E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\obj\x86\Debug\Cobalt.csproj.CopyC
 E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\obj\x86\Debug\Centipede.exe
 E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\obj\x86\Debug\Centipede.pdb
 E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\GameFont.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\giphy.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\waluigi.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\platform.xnb

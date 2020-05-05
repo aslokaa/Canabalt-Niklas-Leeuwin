@@ -9,14 +9,25 @@ namespace Centipede.GameObjects
 {
     class Score : TextGameObject
     {
+        private int meters = 0;
+
+
         public Score(string assetname= "GameFont") : base(assetname)
         {
-            position = new Vector2(1000, 20);
+            position = new Vector2(900, 20);
+            text = "";
+            color = Color.Black;
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            text = "Meters: " + meters;
+        }
+
+        public void addMeters(int meters)
+        {
+            this.meters += meters;
         }
     }
 }

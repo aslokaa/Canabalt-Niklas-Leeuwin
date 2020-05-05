@@ -1,3 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/background.jpg","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/background.xnb","TextureProcessor","Texture2DContent",154750,3686485,0.1775254
+"E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/background.jpg","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/background.xnb","TextureProcessor","Texture2DContent",328042,7668085,0.2547311
 "E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/GameFont.spritefont","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/GameFont.xnb","FontDescriptionProcessor","SpriteFontContent",2006,267281,0.3286265
+"E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/platform.png","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/platform.xnb","TextureProcessor","Texture2DContent",3842,112085,0.1067138
+"E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/waluigi.png","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/waluigi.xnb","TextureProcessor","Texture2DContent",4416,45525,0.1047195
