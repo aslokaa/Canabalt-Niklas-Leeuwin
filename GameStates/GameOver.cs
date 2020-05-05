@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Xna.Framework;
 
 namespace Centipede.GameStates
 {
-    class TitleScreen : UnplayableState
+    class GameOver : UnplayableState
     {
-        public TitleScreen()
+        GameOver(GameObject gameObject)
         {
-            Init();
+            Add(gameObject);
         }
 
         protected override void SwitchState()
         {
-            Canabalt.GameStateManager.SwitchTo("PlayingState");
+            Canabalt.GameStateManager.SwitchTo("TitleScreen");
         }
     }
 }

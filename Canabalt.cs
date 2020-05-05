@@ -20,9 +20,9 @@ namespace Centipede
             spriteBatch = new SpriteBatch(GraphicsDevice);
             screen = new Point(1280, 720);
             ApplyResolutionSettings();
-            gameStateManager.AddGameState("StartingState",new StartingState());
+            gameStateManager.AddGameState("TitleScreen",new TitleScreen());
             gameStateManager.AddGameState("PlayingState", new PlayingState());
-            gameStateManager.SwitchTo("StartingState");
+            gameStateManager.SwitchTo("TitleScreen");
             // TODO: use this.Content to load your game content here
         }
         

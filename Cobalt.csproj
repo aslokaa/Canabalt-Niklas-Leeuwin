@@ -63,8 +63,10 @@
     <Compile Include="GameObjects\Platform.cs" />
     <Compile Include="GameObjects\Score.cs" />
     <Compile Include="GameObjects\WorldObject.CS" />
+    <Compile Include="GameStates\GameOver.cs" />
     <Compile Include="GameStates\PlayingState.cs" />
     <Compile Include="GameStates\StartingState.cs" />
+    <Compile Include="GameStates\UnplayableState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

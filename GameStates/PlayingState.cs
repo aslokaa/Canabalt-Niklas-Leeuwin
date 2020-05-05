@@ -74,7 +74,13 @@ namespace Centipede.GameStates
             spawnPlatforms();
             spawnBullets();
             score.AddMeters(METERS_PER_SECOND*player.getSpeedModifier());
+            if (checkDeath())
+            {
+                Canabalt.GameStateManager.SwitchTo("GameOver");
+            }
         }
+
+
 
         private void DestroyPlatforms()
         {
@@ -158,6 +164,22 @@ namespace Centipede.GameStates
             {
                 bullet.Position += worldVelocity * player.getSpeedModifier()*BULLET_SPEED_MODIFIER;
             }
+        }
+
+        private bool checkDeath()
+        {
+            foreach (WorldObject bullet in bullets.Children)
+            {
+                if (player.CollidesWith(bullet))
+                {
+                    return true;
+                }
+            }
+            if (player.Position.Y> Canabalt.Screen.Y)
+            {
+                return true;
+            }
+            return false;
         }
 
         public static List<GameObject> GetPlatforms()
