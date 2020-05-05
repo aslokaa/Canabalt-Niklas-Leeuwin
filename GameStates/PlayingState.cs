@@ -24,12 +24,13 @@ namespace Centipede.GameStates
         Point
             platformSpawnZoneLeft = new Point(1290, 400),
             platformSpawnZoneRight = new Point(1500, 600);
-        int
+        float
             platformTimer,
             bulletTimer;
-        const int
+        const float
+            PLATFORM_TIMER_MODIFIER = 3,// platform timer -= the speed modifier that is at most 2.5
             BULLET_COOLDOWN = 180, //3 seconds
-            PLATFORM_COOLDOWN = 120; //2 seconds
+            PLATFORM_COOLDOWN = 150; //2.5 seconds
 
 
 
@@ -88,7 +89,8 @@ namespace Centipede.GameStates
 
         private void spawnPlatforms()
         {
-            if (platformTimer++ > PLATFORM_COOLDOWN)
+            platformTimer += PLATFORM_TIMER_MODIFIER - player.getSpeedModifier()/2; 
+            if (platformTimer > PLATFORM_COOLDOWN)
             {
                 platformTimer = 0;
                 int platformsX = (int)(platforms.Position.X);

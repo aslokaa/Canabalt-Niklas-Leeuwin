@@ -21,7 +21,7 @@ namespace Centipede.GameObjects
         private Vector2
             jumpVelocity = new Vector2(0, -50),
             gravity = new Vector2(0, 2),
-            farInScreen = new Vector2(-3, 0),
+            farInScreen = new Vector2(-1.5f, 0),
             acceleration = new Vector2(4, 0);
 
 
@@ -47,7 +47,7 @@ namespace Centipede.GameObjects
         public override void HandleInput(InputHelper inputHelper)
         {
             base.HandleInput(inputHelper);
-            if (inputHelper.KeyPressed(Keys.Space))
+            if (inputHelper.KeyPressed(Keys.Space) && (Velocity.Y>-2&&Velocity.Y<2))
             {
                 Velocity += jumpVelocity;
             }
@@ -79,7 +79,7 @@ namespace Centipede.GameObjects
                 position.Y = collidedY - Sprite.Height;
                 velocity.Y *= -DECELERATION;
             }
-            if (getSpeedModifier() > (SPEED_MODIFIER_HIGH / 2))
+            if (getSpeedModifier() > (SPEED_MODIFIER_HIGH / 4 * 3))
             {
                 velocity += farInScreen;
             }
