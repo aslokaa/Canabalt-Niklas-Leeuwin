@@ -1,5 +1,14 @@
 ﻿using System;
 
+/**Niklas Leeuwin 50074205
+ * GPA tentamen 2020 
+ * Canabalt: Waluigi edition
+ * Made using the centipede code as start
+ * 
+ **/
+
+
+
 namespace Centipede
 {
 #if WINDOWS || LINUX

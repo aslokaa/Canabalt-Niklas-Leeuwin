@@ -19,7 +19,7 @@ namespace Centipede.GameStates
         Random random = new Random();
 
         Vector2
-            backgroundReset = new Vector2(-1280, 0),
+            backgroundReset = new Vector2(-1280, 0), 
             worldVelocity = new Vector2(-1, 0);
         Point
             platformSpawnZoneLeft = new Point(1290, 400),
@@ -153,6 +153,7 @@ namespace Centipede.GameStates
             }
         }
 
+        //returns true if the player should be dead.
         private bool checkDeath()
         {
             foreach (WorldObject bullet in bullets.Children)

@@ -12,6 +12,7 @@
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/PacMan2.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/platform.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/Snake.png</File>
+    <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/sonic.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/spr_kdanky_dang.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/spr_pinky.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/sprite.png</File>
@@ -19,6 +20,7 @@
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/waluigi.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

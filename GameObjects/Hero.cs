@@ -61,6 +61,7 @@ namespace Centipede.GameObjects
             }
         }
 
+        //applies gravity to the velocity
         private void ApplyGravity()
         {
             if (velocity.Y != 0)
@@ -69,6 +70,7 @@ namespace Centipede.GameObjects
             }
         }
 
+        //handles all the movement
         private void Move()
         {
             ApplyGravity();

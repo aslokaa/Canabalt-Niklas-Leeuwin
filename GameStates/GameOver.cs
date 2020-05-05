@@ -25,11 +25,5 @@ namespace Centipede.GameStates
         {
             this.Add(score);
         }
-
-        public override void Reset()
-        {
-            base.Reset();
-            //score = new Score();
-        }
     }
 }

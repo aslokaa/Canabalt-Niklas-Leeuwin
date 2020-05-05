@@ -16,6 +16,7 @@ namespace Centipede.GameObjects
         }
 
 
+        //returns true if it collides with another platform
         public bool CollidesWithOtherPlatform()
         {
             bool collided = false;

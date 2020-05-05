@@ -13,10 +13,12 @@ namespace Centipede.GameStates
     {
         Hero hero = new Hero("waluigi");
 
+        //different skins
         static public string[] waluigis = new string[]{
             "waluigi", "fat waluigi", "spr_kdanky_dang",
             "spr_pinky", "PacMan2", "Ghost2",
-            "sprite_player","snake","sprite" };
+            "sprite_player","snake","sprite",
+            "sonic"};
         static int characterIndex;
 
         static public int CharacterIndex { get => characterIndex; set => characterIndex = value; }
@@ -31,11 +33,11 @@ namespace Centipede.GameStates
             base.Init();
             Reset();
             TextGameObject title = new TextGameObject("GameFont");
-            title.Text = "WaluBalt";
+            title.Text = "WaluBalt\nPress D to change Characters";
             title.Color = Color.Purple;
-            title.Position = new Vector2(Canabalt.Screen.X / 2, Canabalt.Screen.Y / 2);
+            title.Position = new Vector2(Canabalt.Screen.X / 3, Canabalt.Screen.Y / 2);
             this.Add(hero, title);
-            
+
         }
 
         public override void Update(GameTime gameTime)
@@ -49,10 +51,11 @@ namespace Centipede.GameStates
             base.HandleInput(inputHelper);
             if (inputHelper.KeyPressed(Keys.D))
             {
-                if (CharacterIndex+1 == waluigis.Length)
+                if (CharacterIndex + 1 == waluigis.Length)
                 {
                     CharacterIndex = 0;
-                } else
+                }
+                else
                 {
                     CharacterIndex++;
                 }
