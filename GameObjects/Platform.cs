@@ -15,6 +15,7 @@ namespace Centipede.GameObjects
             this.position = position;
         }
 
+
         public bool CollidesWithOtherPlatform()
         {
             bool collided = false;

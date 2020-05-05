@@ -27,7 +27,7 @@ namespace Centipede.GameObjects
 
 
 
-        public Hero() : base("waluigi")
+        public Hero(string assetName) : base(assetName)
         {
             Reset();
         }
@@ -35,8 +35,8 @@ namespace Centipede.GameObjects
         public override void Reset()
         {
             base.Reset();
-            Position = new Vector2(200, 100);
-            velocity = new Vector2(0, 1);
+            Position = new Vector2(200, 300);
+            velocity = new Vector2(0, -40);
         }
 
         public override void Update(GameTime gameTime)

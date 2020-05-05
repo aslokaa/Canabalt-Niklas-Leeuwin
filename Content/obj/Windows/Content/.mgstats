@@ -1,6 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/background.jpg","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/background.xnb","TextureProcessor","Texture2DContent",328042,7668085,0.2547311
 "E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/Bullet.png","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/Bullet.xnb","TextureProcessor","Texture2DContent",831,3685,0.0937497
+"E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/fat waluigi.png","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/fat waluigi.xnb","TextureProcessor","Texture2DContent",8846,5760085,0.4054222
 "E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/GameFont.spritefont","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/GameFont.xnb","FontDescriptionProcessor","SpriteFontContent",2006,267281,0.3286265
 "E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/platform.png","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/platform.xnb","TextureProcessor","Texture2DContent",5794,85485,0.1033242
 "E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/waluigi.png","E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/waluigi.xnb","TextureProcessor","Texture2DContent",3947,14805,0.0099733

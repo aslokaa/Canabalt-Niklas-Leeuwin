@@ -16,6 +16,9 @@ namespace Centipede.GameObjects
         public float Meters { get => meters; set => meters = value; }
         public float Bullets { get => bullets; set => bullets = value; }
 
+        private float redTimer;
+        private const float RED_TIME = 15; //0.25 seconds
+
         public Score(string assetname= "GameFont") : base(assetname)
         {
             position = new Vector2(750, 20);
@@ -35,6 +38,13 @@ namespace Centipede.GameObjects
         {
             base.Update(gameTime);
             text = "Meters: " + (int)Meters +"\nBullets Dodged: "+Bullets;
+            if (redTimer++ < RED_TIME)
+            {
+                color = Color.Red;
+            }
+            else
+                color = Color.Black;
+            
         }
 
         public void AddMeters(float meters)
@@ -44,6 +54,7 @@ namespace Centipede.GameObjects
 
         public void AddBullets(float bullets)
         {
+            redTimer = 0;
             this.Bullets += bullets;
         }
     }

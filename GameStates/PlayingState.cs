@@ -11,7 +11,7 @@ namespace Centipede.GameStates
     class PlayingState : GameObjectList
     {
         SpriteGameObject background = new SpriteGameObject("background");
-        Hero player = new Hero();
+        Hero player = new Hero("fat waluigi");
         Score score = new Score();
         static GameObjectList
             bullets = new GameObjectList(),
@@ -48,8 +48,6 @@ namespace Centipede.GameStates
         {
             base.Reset();
             platformTimer = 60;
-            //platforms = new GameObjectList();
-            //bullets = new GameObjectList();
             platforms.Add(new Platform(new Vector2(player.Position.X, 450)));
             platforms.Add(new Platform(new Vector2(player.Position.X + 500, 250)));
         }
@@ -124,11 +122,10 @@ namespace Centipede.GameStates
             if (platformTimer > PLATFORM_COOLDOWN)
             {
                 platformTimer = 0;
-                int platformsX = (int)(platforms.Position.X);
                 Platform platform = new Platform(
 
                     new Vector2(
-                        random.Next(platformSpawnZoneLeft.X + platformsX, platformSpawnZoneRight.X + platformsX),
+                        random.Next(platformSpawnZoneLeft.X, platformSpawnZoneRight.X),
                         random.Next(platformSpawnZoneLeft.Y, platformSpawnZoneRight.Y)));
                 if (!platform.CollidesWithOtherPlatform())
                 {
