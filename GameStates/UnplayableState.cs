@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace Centipede.GameStates
         public virtual void Init()
         {
             TextGameObject text = new TextGameObject("GameFont");
-            text.Text = "Press any key to continue.";
+            text.Text = "Press space to continue.";
             text.Color = Color.Black;
             this.Add(new SpriteGameObject("background"), text);
 
@@ -26,7 +27,7 @@ namespace Centipede.GameStates
         public override void HandleInput(InputHelper inputHelper)
         {
             base.HandleInput(inputHelper);
-            if (inputHelper.AnyKeyPressed)
+            if (inputHelper.IsKeyDown(Keys.Space))
             {
                 Canabalt.Reset();
                 Canabalt.GameStateManager.SwitchTo("PlayingState");

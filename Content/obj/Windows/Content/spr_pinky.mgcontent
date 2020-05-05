@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/fat waluigi.png</SourceFile>
-  <SourceTime>2020-05-05T22:05:24.5593671+02:00</SourceTime>
-  <DestFile>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/fat waluigi.xnb</DestFile>
-  <DestTime>2020-05-05T22:05:33.2445646+02:00</DestTime>
+  <SourceFile>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/spr_pinky.png</SourceFile>
+  <SourceTime>2020-05-05T22:23:38.3919113+02:00</SourceTime>
+  <DestFile>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/spr_pinky.xnb</DestFile>
+  <DestTime>2020-05-05T22:25:43.5575131+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

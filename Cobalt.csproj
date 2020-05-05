@@ -79,6 +79,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\background.jpg" />
+    <Content Include="Content\Bullet.png" />
+    <Content Include="Content\fat waluigi.png" />
+    <Content Include="Content\Ghost2.png" />
+    <Content Include="Content\PacMan2.png" />
+    <Content Include="Content\platform.png" />
+    <Content Include="Content\spr_kdanky_dang.png" />
+    <Content Include="Content\spr_pinky.png" />
     <Content Include="Content\waluigi.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>

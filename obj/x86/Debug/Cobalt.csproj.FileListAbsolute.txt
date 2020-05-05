@@ -51,3 +51,10 @@ E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\wal
 E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\platform.xnb
 E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\Bullet.xnb
 E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\fat waluigi.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\spr_kdanky_dang.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\Ghost2.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\PacMan2.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\spr_pinky.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\sprite_player.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\Snake.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\sprite.xnb

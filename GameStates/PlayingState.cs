@@ -11,7 +11,7 @@ namespace Centipede.GameStates
     class PlayingState : GameObjectList
     {
         SpriteGameObject background = new SpriteGameObject("background");
-        Hero player = new Hero("fat waluigi");
+        Hero player;
         Score score = new Score();
         static GameObjectList
             bullets = new GameObjectList(),
@@ -35,27 +35,13 @@ namespace Centipede.GameStates
             BULLET_COOLDOWN = 45, //0.75 seconds
             PLATFORM_COOLDOWN = 150; //2.5 seconds
 
-
-
-
-        public PlayingState()
-        {
-            Reset();
-            Init();
-        }
-
         public override void Reset()
         {
             base.Reset();
             platformTimer = 60;
+            player = new Hero(TitleScreen.waluigis[TitleScreen.CharacterIndex]);
             platforms.Add(new Platform(new Vector2(player.Position.X, 450)));
             platforms.Add(new Platform(new Vector2(player.Position.X + 500, 250)));
-        }
-
-        public void Init()
-        {
-            Reset();
-            background.Velocity = worldVelocity;
             this.Add(background, score, player, platforms, bullets);
         }
 

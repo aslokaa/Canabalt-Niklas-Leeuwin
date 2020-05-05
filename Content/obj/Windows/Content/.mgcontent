@@ -8,10 +8,24 @@
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/Bullet.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/fat waluigi.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/GameFont.spritefont</File>
+    <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/Ghost2.png</File>
+    <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/PacMan2.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/platform.png</File>
+    <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/Snake.png</File>
+    <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/spr_kdanky_dang.png</File>
+    <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/spr_pinky.png</File>
+    <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/sprite.png</File>
+    <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/sprite_player.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/waluigi.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

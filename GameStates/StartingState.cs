@@ -5,12 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Centipede.GameObjects;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace Centipede.GameStates
 {
     class TitleScreen : UnplayableState
     {
         Hero hero = new Hero("waluigi");
+
+        static public string[] waluigis = new string[]{
+            "waluigi", "fat waluigi", "spr_kdanky_dang",
+            "spr_pinky", "PacMan2", "Ghost2",
+            "sprite_player","snake","sprite" };
+        static int characterIndex;
+
+        static public int CharacterIndex { get => characterIndex; set => characterIndex = value; }
 
         public TitleScreen()
         {
@@ -33,6 +42,23 @@ namespace Centipede.GameStates
         {
             base.Update(gameTime);
             hero.Reset();
+        }
+
+        public override void HandleInput(InputHelper inputHelper)
+        {
+            base.HandleInput(inputHelper);
+            if (inputHelper.KeyPressed(Keys.D))
+            {
+                if (CharacterIndex+1 == waluigis.Length)
+                {
+                    CharacterIndex = 0;
+                } else
+                {
+                    CharacterIndex++;
+                }
+                hero = new Hero(waluigis[CharacterIndex]);
+                this.Add(hero);
+            }
         }
     }
 }
