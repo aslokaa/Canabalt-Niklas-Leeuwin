@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Centipede.GameObjects
 {
-    class Platform : SpriteGameObject
+    class Platform : WorldObject
     {
         public Platform(Vector2 position,string assetName = "platform") : base(assetName)
         {
@@ -29,9 +29,6 @@ namespace Centipede.GameObjects
             return collided;
         }
 
-        public bool OutOfMap()
-        {
-            return position.X + Sprite.Width < 0;
-        }
+        
     }
 }

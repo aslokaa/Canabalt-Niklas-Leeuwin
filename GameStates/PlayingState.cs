@@ -28,8 +28,11 @@ namespace Centipede.GameStates
             platformTimer,
             bulletTimer;
         const float
+            BACKGROUND_SPEED_MODIFIER = 0.9f,
+            BULLET_SPEED_MODIFIER = 3f,
+            METERS_PER_SECOND = 0.05f,
             PLATFORM_TIMER_MODIFIER = 3,// platform timer -= the speed modifier that is at most 2.5
-            BULLET_COOLDOWN = 180, //3 seconds
+            BULLET_COOLDOWN = 45, //0.75 seconds
             PLATFORM_COOLDOWN = 150; //2.5 seconds
 
 
@@ -67,8 +70,10 @@ namespace Centipede.GameStates
             base.Update(gameTime);
             MoveBackground();
             DestroyPlatforms();
+            DestroyBullets();
             spawnPlatforms();
-            score.addMeters(player.getSpeedModifier());
+            spawnBullets();
+            score.AddMeters(METERS_PER_SECOND*player.getSpeedModifier());
         }
 
         private void DestroyPlatforms()
@@ -84,6 +89,22 @@ namespace Centipede.GameStates
             foreach (Platform platform in doomedPlatforms)
             {
                 platforms.Remove(platform);
+            }
+        }
+        private void DestroyBullets()
+        {
+            List<WorldObject> doomedBullets = new List<WorldObject>();
+            foreach (WorldObject bullet in bullets.Children)
+            {
+                if (bullet.OutOfMap())
+                {
+                    doomedBullets.Add(bullet);
+                }
+            }
+            score.AddBullets(doomedBullets.Count);
+            foreach (WorldObject bullet in doomedBullets)
+            {
+                platforms.Remove(bullet);
             }
         }
 
@@ -111,11 +132,11 @@ namespace Centipede.GameStates
             if (bulletTimer++ > BULLET_COOLDOWN)
             {
                 bulletTimer = 0;
-                SpriteGameObject bullet = new SpriteGameObject("bullet");
+                WorldObject bullet = new WorldObject("bullet");
                 bullet.Position = new Vector2(
                     random.Next(platformSpawnZoneLeft.X, platformSpawnZoneRight.X),
                     random.Next(0, Canabalt.Screen.Y));
-                
+                bullets.Add(bullet);
             }
         }
         private void MoveBackground()
@@ -125,10 +146,17 @@ namespace Centipede.GameStates
             {
                 background.Position = Vector2.Zero;
             }
-            background.Position += worldVelocity * player.getSpeedModifier();
+
+            background.Position +=worldVelocity * player.getSpeedModifier()*BACKGROUND_SPEED_MODIFIER;
+
             foreach (Platform platform in GetPlatforms())
             {
                 platform.Position += worldVelocity * player.getSpeedModifier();
+            }
+
+            foreach (SpriteGameObject bullet in bullets.Children)
+            {
+                bullet.Position += worldVelocity * player.getSpeedModifier()*BULLET_SPEED_MODIFIER;
             }
         }
 

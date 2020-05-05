@@ -62,6 +62,7 @@
     <Compile Include="GameObjects\Hero.cs" />
     <Compile Include="GameObjects\Platform.cs" />
     <Compile Include="GameObjects\Score.cs" />
+    <Compile Include="GameObjects\WorldObject.CS" />
     <Compile Include="GameStates\PlayingState.cs" />
     <Compile Include="GameStates\StartingState.cs" />
     <Compile Include="Program.cs" />

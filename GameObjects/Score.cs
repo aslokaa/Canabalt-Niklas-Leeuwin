@@ -9,26 +9,40 @@ namespace Centipede.GameObjects
 {
     class Score : TextGameObject
     {
-        private float meters = 0;
+        float
+            bullets,
+            meters;
 
 
         public Score(string assetname= "GameFont") : base(assetname)
         {
-            position = new Vector2(900, 20);
+            position = new Vector2(750, 20);
             text = "";
             color = Color.Black;
+            Reset();
+        }
+
+        public override void Reset()
+        {
+            base.Reset();
+            bullets = 0;
+            meters = 0;
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            text = "Meters: " + meters;
+            text = "Meters: " + (int)meters +"\nBullets Dodged: "+bullets;
         }
 
-        public void addMeters(float meters)
+        public void AddMeters(float meters)
         {
-            //this.meters += meters;
-            this.meters = meters;
+            this.meters += meters;
+        }
+
+        public void AddBullets(float bullets)
+        {
+            this.bullets += bullets;
         }
     }
 }
