@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Centipede.GameStates;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,20 @@ namespace Centipede.GameObjects
         public override void Update(GameTime gameTime)
         {
             position += velocity ;
+        }
+
+        public bool CollidesWithOtherPlatform()
+        {
+            bool collided = false;
+            foreach (Platform platform in PlayingState.GetPlatforms())
+            {
+                if (CollidesWith(platform))
+                {
+                    collided = true;
+                }
+
+            }
+            return collided;
         }
     }
 }

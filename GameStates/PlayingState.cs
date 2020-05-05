@@ -14,9 +14,14 @@ namespace Centipede.GameStates
         Hero player = new Hero();
         Score score = new Score();
         static GameObjectList platforms = new GameObjectList();
-        Vector2 backgroundReset = new Vector2(-1280, 0),
+        Vector2
+            backgroundReset = new Vector2(-1280, 0),
             worldVelocity = new Vector2(-1, 0);
-        
+        Point
+            platformSpawnZoneLeft = new Point(1290, 400),
+            platformSpawnZoneRight = new Point(1500, 600);
+
+
 
 
         public PlayingState()
@@ -47,6 +52,21 @@ namespace Centipede.GameStates
         {
             base.Update(gameTime);
             MoveBackground();
+            spawnPlatforms();
+        }
+
+        private void spawnPlatforms()
+        {
+            Random random = new Random();
+            Platform platform = new Platform(
+                new Vector2(
+                    random.Next(platformSpawnZoneLeft.X, platformSpawnZoneRight.X),
+                    random.Next(platformSpawnZoneLeft.Y, platformSpawnZoneRight.Y)),
+                    worldVelocity);
+            if (!platform.CollidesWithOtherPlatform())
+            {
+                platforms.Add(platform);
+            }
         }
 
         private void MoveBackground()

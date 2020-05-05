@@ -18,15 +18,22 @@ namespace Centipede.GameObjects
             scoreModifier = 0,
             deceleration = 0.85f;
         private Vector2
-            jumpVelocity = new Vector2(0, -20),
-            gravity = new Vector2(0, 3),
-            acceleration = new Vector2(8, 0);
+            jumpVelocity = new Vector2(0, -50),
+            gravity = new Vector2(0, 2),
+            acceleration = new Vector2(4, 0);
 
 
 
         public Hero() : base("waluigi")
         {
+            Reset();
+        }
+
+        public override void Reset()
+        {
+            base.Reset();
             Position = new Vector2(200, 100);
+            velocity = new Vector2(0, 1);
         }
 
         public override void Update(GameTime gameTime)
@@ -41,11 +48,11 @@ namespace Centipede.GameObjects
             {
                 Velocity += jumpVelocity;
             }
-            if (inputHelper.KeyPressed(Keys.A))
+            if (inputHelper.IsKeyDown(Keys.A))
             {
                 Velocity -= acceleration;
             }
-            if (inputHelper.KeyPressed(Keys.D))
+            if (inputHelper.IsKeyDown(Keys.D))
             {
                 Velocity += acceleration;
             }
@@ -53,7 +60,10 @@ namespace Centipede.GameObjects
 
         private void ApplyGravity()
         {
-            position += gravity;
+            if (velocity.Y != 0)
+            {
+                velocity += gravity;
+            }
         }
 
         private void Move()
