@@ -9,13 +9,18 @@ namespace Centipede.GameStates
 {
     class UnplayableState : GameObjectList
     {
+        public UnplayableState()
+        {
+            Init();
+        }
 
-        public void Init()
+        public virtual void Init()
         {
             TextGameObject text = new TextGameObject("GameFont");
             text.Text = "Press any key to continue.";
             text.Color = Color.Black;
             this.Add(new SpriteGameObject("background"), text);
+
         }
 
         public override void HandleInput(InputHelper inputHelper)
@@ -23,14 +28,11 @@ namespace Centipede.GameStates
             base.HandleInput(inputHelper);
             if (inputHelper.AnyKeyPressed)
             {
-                SwitchState();
+                Canabalt.Reset();
+                Canabalt.GameStateManager.SwitchTo("PlayingState");
             }
         }
 
-        protected virtual void SwitchState()
-        {
-            throw new NotImplementedException();
-        }
 
     }
 }

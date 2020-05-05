@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Centipede.GameObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,27 @@ namespace Centipede.GameStates
 {
     class GameOver : UnplayableState
     {
-        GameOver(GameObject gameObject)
+        static Score score = new Score() ;
+
+        public static Score Score
         {
-            Add(gameObject);
+            get => Score;
+            set
+            {
+                score.Meters=value.Meters;
+                score.Bullets=value.Bullets;
+            }
         }
 
-        protected override void SwitchState()
+        public GameOver()
         {
-            Canabalt.GameStateManager.SwitchTo("TitleScreen");
+            this.Add(score);
+        }
+
+        public override void Reset()
+        {
+            base.Reset();
+            score = new Score();
         }
     }
 }

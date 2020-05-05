@@ -48,6 +48,8 @@ namespace Centipede.GameStates
         {
             base.Reset();
             platformTimer = 60;
+            //platforms = new GameObjectList();
+            //bullets = new GameObjectList();
             platforms.Add(new Platform(new Vector2(player.Position.X, 450)));
             platforms.Add(new Platform(new Vector2(player.Position.X + 500, 250)));
         }
@@ -73,9 +75,10 @@ namespace Centipede.GameStates
             DestroyBullets();
             spawnPlatforms();
             spawnBullets();
-            score.AddMeters(METERS_PER_SECOND*player.getSpeedModifier());
+            score.AddMeters(METERS_PER_SECOND * player.getSpeedModifier());
             if (checkDeath())
             {
+                GameOver.Score = score;
                 Canabalt.GameStateManager.SwitchTo("GameOver");
             }
         }
@@ -105,18 +108,19 @@ namespace Centipede.GameStates
                 if (bullet.OutOfMap())
                 {
                     doomedBullets.Add(bullet);
+                    score.AddBullets(1);
                 }
             }
-            score.AddBullets(doomedBullets.Count);
             foreach (WorldObject bullet in doomedBullets)
             {
-                platforms.Remove(bullet);
+                bullets.Remove(bullet);
+                
             }
         }
 
         private void spawnPlatforms()
         {
-            platformTimer += PLATFORM_TIMER_MODIFIER - player.getSpeedModifier()/2; 
+            platformTimer += PLATFORM_TIMER_MODIFIER - player.getSpeedModifier() / 2;
             if (platformTimer > PLATFORM_COOLDOWN)
             {
                 platformTimer = 0;
@@ -153,7 +157,7 @@ namespace Centipede.GameStates
                 background.Position = Vector2.Zero;
             }
 
-            background.Position +=worldVelocity * player.getSpeedModifier()*BACKGROUND_SPEED_MODIFIER;
+            background.Position += worldVelocity * player.getSpeedModifier() * BACKGROUND_SPEED_MODIFIER;
 
             foreach (Platform platform in GetPlatforms())
             {
@@ -162,7 +166,7 @@ namespace Centipede.GameStates
 
             foreach (SpriteGameObject bullet in bullets.Children)
             {
-                bullet.Position += worldVelocity * player.getSpeedModifier()*BULLET_SPEED_MODIFIER;
+                bullet.Position += worldVelocity * player.getSpeedModifier() * BULLET_SPEED_MODIFIER;
             }
         }
 
@@ -175,7 +179,7 @@ namespace Centipede.GameStates
                     return true;
                 }
             }
-            if (player.Position.Y> Canabalt.Screen.Y)
+            if (player.Position.Y > Canabalt.Screen.Y)
             {
                 return true;
             }

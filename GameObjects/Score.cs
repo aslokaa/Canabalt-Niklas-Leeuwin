@@ -13,6 +13,8 @@ namespace Centipede.GameObjects
             bullets,
             meters;
 
+        public float Meters { get => meters; set => meters = value; }
+        public float Bullets { get => bullets; set => bullets = value; }
 
         public Score(string assetname= "GameFont") : base(assetname)
         {
@@ -25,24 +27,24 @@ namespace Centipede.GameObjects
         public override void Reset()
         {
             base.Reset();
-            bullets = 0;
-            meters = 0;
+            Bullets = 0;
+            Meters = 0;
         }
 
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
-            text = "Meters: " + (int)meters +"\nBullets Dodged: "+bullets;
+            text = "Meters: " + (int)Meters +"\nBullets Dodged: "+Bullets;
         }
 
         public void AddMeters(float meters)
         {
-            this.meters += meters;
+            this.Meters += meters;
         }
 
         public void AddBullets(float bullets)
         {
-            this.bullets += bullets;
+            this.Bullets += bullets;
         }
     }
 }

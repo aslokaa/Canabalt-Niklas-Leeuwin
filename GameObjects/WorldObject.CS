@@ -12,6 +12,12 @@ namespace Centipede.GameObjects
         {
         }
 
+        public override void Reset()
+        {
+            base.Reset();
+            position.Y = -2000;
+        }
+
 
         public bool OutOfMap()
         {
