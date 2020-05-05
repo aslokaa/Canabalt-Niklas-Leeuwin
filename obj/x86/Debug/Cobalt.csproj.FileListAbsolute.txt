@@ -49,3 +49,4 @@ E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\Gam
 E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\giphy.xnb
 E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\waluigi.xnb
 E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\platform.xnb
+E:\school\GPA tentamen\Canabalt-Niklas-Leeuwin\bin\Windows\x86\Debug\Content\Bullet.xnb

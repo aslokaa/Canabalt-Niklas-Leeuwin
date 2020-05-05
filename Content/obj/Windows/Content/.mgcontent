@@ -5,11 +5,13 @@
   <Config />
   <SourceFiles>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/background.jpg</File>
+    <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/Bullet.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/GameFont.spritefont</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/platform.png</File>
     <File>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/waluigi.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

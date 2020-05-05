@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/platform.png</SourceFile>
-  <SourceTime>2020-05-05T17:59:05.2088186+02:00</SourceTime>
+  <SourceTime>2020-05-05T19:41:46.4986956+02:00</SourceTime>
   <DestFile>E:/school/GPA tentamen/Canabalt-Niklas-Leeuwin/Content/bin/Windows/Content/platform.xnb</DestFile>
-  <DestTime>2020-05-05T18:00:03.0597565+02:00</DestTime>
+  <DestTime>2020-05-05T19:43:03.7710118+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -9,7 +9,7 @@ namespace Centipede.GameObjects
 {
     class Score : TextGameObject
     {
-        private int meters = 0;
+        private float meters = 0;
 
 
         public Score(string assetname= "GameFont") : base(assetname)
@@ -25,9 +25,10 @@ namespace Centipede.GameObjects
             text = "Meters: " + meters;
         }
 
-        public void addMeters(int meters)
+        public void addMeters(float meters)
         {
-            this.meters += meters;
+            //this.meters += meters;
+            this.meters = meters;
         }
     }
 }

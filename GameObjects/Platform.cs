@@ -10,15 +10,9 @@ namespace Centipede.GameObjects
 {
     class Platform : SpriteGameObject
     {
-        public Platform(Vector2 position,Vector2 velocity,string assetName = "platform") : base(assetName)
+        public Platform(Vector2 position,string assetName = "platform") : base(assetName)
         {
             this.position = position;
-            this.velocity = velocity;
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            position += velocity ;
         }
 
         public bool CollidesWithOtherPlatform()
@@ -33,6 +27,11 @@ namespace Centipede.GameObjects
 
             }
             return collided;
+        }
+
+        public bool OutOfMap()
+        {
+            return position.X + Sprite.Width < 0;
         }
     }
 }
